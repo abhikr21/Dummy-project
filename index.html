@@ -9,16 +9,10 @@
 </head>
 
 <body>
-  <script>
-    async function getAnimalData() {
-      let response = await fetch("https://fakerapi.it/api/v1/persons")
-      let finalResponse = await response.json()
-      console.log(finalResponse)
-      document.getElementById("container").innerHTML = JSON.stringify(finalResponse.data)
-    }
-  </script>
-  <div id="container"></div>
-  <button onclick="getAnimalData()">Get Animal Data</button>
+  <input oninput="debouncePopulate()" id="firstNum" type="text" placeholder="first number"></input><br></br>
+  <input oninput="debouncePopulate()" id="secondNum" type="text" placeholder="second number"></input><br></br>
+  <div id="finalSum"></div>
+  <script src="script.js"></script>
 </body>
 
 </html>
